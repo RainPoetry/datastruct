@@ -1,0 +1,10 @@
+
+{
+squid:S135 "YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ8•¼Üû,
+9squid:S3626:"Remove this redundant jump.(ÉŠ©ƒ8ù£áÜû,
+Hsquid:S1172"*Remove this unused method parameter "key".(ëãàÈ8øãƒÜû,
+¤squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(É¿Ê¿ûÿÿÿÿ8øãƒÜû,
+Ÿsquid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±å²“8¹›†Üû,
+Ÿsquid:S1186W"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Çµí‘8é¸¥Üû,
+9squid:S3626'"Remove this redundant jump.(ÉŠ©ƒ8•¼Üû,
+usquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 31 to the 15 allowed.(©ï—¨ûÿÿÿÿ8†àÄÜû,

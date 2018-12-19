@@ -1,0 +1,9 @@
+
+[
+squid:S106d"9Replace this use of System.out or System.err by a logger.(¿×Ö§ÿÿÿÿÿ8†‡¢Ùù,
+}squid:S11499"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(í…Ò‰8ûÃ—Ùù,
+[
+squid:S106e"9Replace this use of System.out or System.err by a logger.(®õŠÐúÿÿÿÿ8·×¨Ùù,
+[
+squid:S106f"9Replace this use of System.out or System.err by a logger.(¿×Ö§ÿÿÿÿÿ8½Ø¤Ùù,
+isquid:CommentedOutCodeLineM"<This block of commented-out lines of code should be removed.(²®±8ÅÝ‹Ùù,
