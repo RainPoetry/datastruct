@@ -138,7 +138,6 @@ public abstract class MyHashMap<K,V> {
 
 
 	public static void main(String[] args){
-		Integer a = 4;
 
 	}
 }
