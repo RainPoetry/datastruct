@@ -124,20 +124,36 @@ public abstract class MyHashMap<K,V> {
 	}
 
 	/* 计算 hashCode
-	*  将 hash 值的高 16 位和低 16 位进行异或计算得到新的 hashCode
+	*  将 hash 值和高 16 位进行异或计算得到新的 hashCode
 	*  如果只是单纯的 hashCode & （size-1） 很容易造成 hash 冲突 (因为只有数据的低位才参与了计算，高位没有参与计算)
 	*  (当数据的 hashCode > size 的时候，所有的值都堆积在最后一个区域，没有做到均匀分布)
 	*  缺点：
-	*  	导致数据无法有序存储
+	* 		当 key 的 hashcode > 2^16 , 会造成哈希表的最后一个单元格频繁发生hash冲突
+	*
+	*
+	*
 	*/
 	static final int hash(Object key) {
 		int h;
 		return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
 	}
 
+	// * s[0]*31^(n-1) + s[1]*31^(n-2) + ... + s[n-1]
+	// string 类型的 hashcode 计算方式
+	//
+	public int hashCode(char[] value) {
+		int h = 0;
+		if (value.length > 0) {
+			char val[] = value;
+			for (int i = 0; i < value.length; i++) {
+				h = 31 * h + val[i];
+			}
+		}
+		return h;
+	}
 
 
 	public static void main(String[] args){
-
+		System.out.println(hash("1"));
 	}
 }
