@@ -31,6 +31,8 @@ package com.cc.struct;
  */
 public class MyTreeRedBlank<T> {
 
+	public static void main(String[] args){
 
+	}
 
 }
