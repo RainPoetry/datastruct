@@ -98,7 +98,7 @@ public abstract class MyHashMap<K,V> {
 	// 3. 获取数据的存储单元格： index = (size-1) & hashCode
 	// 4.1  如果单元格为 null ,  则新建一个 Node
 	// 4.2  如果单元格中的数据的 hashCode = 传进来的 hashcode, 则获取该 Node
-	// 4.3  如果单元格的数据结构是树， 则 插入 ，返回该 Node
+	// 4.3  如果单元格的数据结构是树， 则插入 ，返回该 Node
 	// 4.3  如果单元格的数据结构是链表， 则判断是否变成树 ， 然后返回该 Node
 	public abstract V put(K key, V value);
 
@@ -109,7 +109,7 @@ public abstract class MyHashMap<K,V> {
 	* 2. 在扩容 HashMap 的时候，数据的存储地址不虚要重新计算，
 	* 		如果 hashcode & 扩容前的size == 0 ( 数据的 hashcode 在新增的 bit 位 为 0 )
 	* 			那么，数据的存储地址不需要改变
-	* 		如果 hashcode & 扩容前的size == 1 ( 数据的 hashcode 在新增的 bit 位 为 0 )
+	* 		如果 hashcode & 扩容前的size == 1 ( 数据的 hashcode 在新增的 bit 位 为 1 )
 	* 			那么，数据的存储地址 = 数据的原来地址 + 扩容前的size
 	* 			并且迁移到扩容区域的数据所在的单元格都是同一个原来单元格的数据
 	*/
@@ -127,7 +127,7 @@ public abstract class MyHashMap<K,V> {
 	*  将 hash 值和高 16 位进行异或计算得到新的 hashCode
 	*  如果只是单纯的 hashCode & （size-1） 很容易造成 hash 冲突 (因为只有数据的低位才参与了计算，高位没有参与计算)
 	*  (当数据的 hashCode > size 的时候，所有的值都堆积在最后一个区域，没有做到均匀分布)
-	*  缺点：
+	 *  缺点：
 	* 		当 key 的 hashcode > 2^16 且存储空间比较小的时候, 会造成哈希表的最后一个单元格频繁发生hash冲突
 	*		(概率微乎其微)
 	*
