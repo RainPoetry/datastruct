@@ -8,6 +8,10 @@ import java.util.Arrays;
  * description: 快速排序
  *
  * 		时间复杂度： O(n * logN)
+ *
+ *
+ * 		缺点：
+ * 			当迭代层数过大时，会导致堆栈溢出
  */
 public class QuickSort extends AbstractSort{
 

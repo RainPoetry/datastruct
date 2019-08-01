@@ -8,6 +8,7 @@ import java.util.Comparator;
  * Date: 2019/1/18
  * description: 优先级队列
  *
+ * 		实现方式： 二叉堆
  * 		PriorityQueue 是以满二叉树为模型对数据进行操作的
  * 			数据实际的存储方式是数组
  *

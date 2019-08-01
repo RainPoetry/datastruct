@@ -12,7 +12,11 @@ package com.cc.struct;
  * 		优点：
  * 			1. 插入快、删除快
  * 		缺点：
- * 			1. 查找慢
+ * 			1. 查找慢、
+ *
+ *
+ * 		特点：
+ * 			1. 内存空间不是连续的，通过指针完成寻址
  */
 public class MyLinkDoubly<T> {
 

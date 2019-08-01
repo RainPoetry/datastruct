@@ -1,6 +1,6 @@
 
-Esquid:S1068"'Remove this unused "max" private field.(Æ²É½8·¢óåø,
 [
 squid:S1061"9Replace this use of System.out or System.err by a logger.(ç˜¦äüÿÿÿÿ8çÖù,
 V
 squid:S1062"9Replace this use of System.out or System.err by a logger.(÷”åâ8çÖù,
+Esquid:S1068"'Remove this unused "max" private field.(Æ²É½8·¢óåø,

@@ -1,19 +1,19 @@
 
+hsquid:S1192n"QDefine a constant instead of duplicating this literal "ç§»é™¤é˜Ÿé¦–ï¼š " 6 times.(¥²‰£
 O
-squid:S106p"9Replace this use of System.out or System.err by a logger.(¥²‰£
-gsquid:CommentedOutCodeLineA"<This block of commented-out lines of code should be removed.(ÖÂÎ¾úÿÿÿÿ
+squid:S106t"9Replace this use of System.out or System.err by a logger.(¥²‰£
 O
 squid:S106u"9Replace this use of System.out or System.err by a logger.(¥²‰£
-O
-squid:S106o"9Replace this use of System.out or System.err by a logger.(¥²‰£
-vsquid:S1149Q"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(í…Ò‰
-usquid:S2293i"YReplace the type specification in this constructor call with the diamond operator ("<>").(²šØ†ÿÿÿÿÿ
-hsquid:S1192n"QDefine a constant instead of duplicating this literal "ç§»é™¤é˜Ÿé¦–ï¼š " 6 times.(¥²‰£
 O
 squid:S106w"9Replace this use of System.out or System.err by a logger.(šÅÐ¿
 O
 squid:S106n"9Replace this use of System.out or System.err by a logger.(¥²‰£
 O
-squid:S106t"9Replace this use of System.out or System.err by a logger.(¥²‰£
+squid:S106p"9Replace this use of System.out or System.err by a logger.(¥²‰£
 O
 squid:S106v"9Replace this use of System.out or System.err by a logger.(¥²‰£
+usquid:S2293i"YReplace the type specification in this constructor call with the diamond operator ("<>").(²šØ†ÿÿÿÿÿ
+gsquid:CommentedOutCodeLineA"<This block of commented-out lines of code should be removed.(ÖÂÎ¾úÿÿÿÿ
+O
+squid:S106o"9Replace this use of System.out or System.err by a logger.(¥²‰£
+vsquid:S1149Q"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(í…Ò‰

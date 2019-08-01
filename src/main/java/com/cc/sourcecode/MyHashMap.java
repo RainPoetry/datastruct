@@ -128,7 +128,7 @@ public abstract class MyHashMap<K,V> {
 	*  如果只是单纯的 hashCode & （size-1） 很容易造成 hash 冲突 (因为只有数据的低位才参与了计算，高位没有参与计算)
 	*  (当数据的 hashCode > size 的时候，所有的值都堆积在最后一个区域，没有做到均匀分布)
 	 *  缺点：
-	* 		当 key 的 hashcode > 2^16 且存储空间比较小的时候, 会造成哈希表的最后一个单元格频繁发生hash冲突
+	* 		当 key 的 hashcode > 2^16 且存储空间比较小的时候, 会造成哈希表的最后一个单元格频繁发生 hash 冲突
 	*		(概率微乎其微)
 	*
 	*

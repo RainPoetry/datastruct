@@ -9,6 +9,9 @@ package com.cc.struct;
  * 		缺点：
  * 			删除、查找慢
  * 			(删除操作会导致删除节点的后续数据前移)
+ *
+ * 		特点：
+ * 			1. 分配的物理地址在空间上是连续的
  */
 public class MyArray<T> {
 

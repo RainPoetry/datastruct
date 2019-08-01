@@ -1,5 +1,6 @@
 package com.cc.utils;
 
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -16,5 +17,10 @@ public class Generate {
 			data[i++] = random.nextInt(bound);
 		}
 		return data;
+	}
+
+	public static void main(String[] args){
+		 
+
 	}
 }
