@@ -91,6 +91,13 @@ public abstract class MyHashMap<K,V> {
 
 	// 分配或扩容 table 的存储空间, 设置 threshold
 	// 如果 table 有数据时，进行数据迁移
+	//  数据迁移(以数组中的单元格为操作单元)：
+	//		将 hashcode & oldCap == 0 的数据用链表连接起来，放入到原来数组的 index 位置
+	//		将 hashcode & oldCap == 1 的数据用链表连接起来，放入到原来数组的 index+oldCap 位置
+	// 		这就相当于只有 hashcode & oldCap == 1 数据放入了新增的地址里面
+	//	1.8 对 resize 方法已经重写了，在并发情况下，不会导死循环的产生，但是容易发生另一个问题，就是数据丢失，
+	//  1.8 在对 table 按照索引进行遍历的时候，会将单元格里原来链表的数据拆分为两个链表然后存储到 index 和 index+oldCap 单元格内，
+	//  在这之后，当原来 index 处的单元格新增数据时，新增数据不会插入到即将发生迁移的链表中，从而导致数据丢失
 	abstract  MyHashMap.Node<K,V>[] resize();
 
 	// 1. 计算 key 的 hash 值 (数据 hashcode 的 高 16位与低 16 位取余)
