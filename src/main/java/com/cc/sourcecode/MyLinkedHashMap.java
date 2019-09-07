@@ -8,14 +8,14 @@ import java.util.LinkedHashMap;
  * Date: 2019/1/26
  * description:
  * <p>
- * 特点：
- * 1. 有序
- * 2. 继承自 HashMap
+ *      特点：
+ *          1. 有序
+ *          2. 继承自 HashMap
  * <p>
  * <p>
- * 有序的实现（存储单元为 链表时）：
- * 1.  HashMap.Node 的插入通过判断 next 指针是否为空，在队尾完成插入
- * 2. 	LinkedHashMap.Entry 在 HashMap.Node 的基础上增加了 before, after指针，将 Hash 表中的所有的 链表内的数据联系在了一起
+ *      有序的实现（存储单元为 链表时）：
+ *      1.  HashMap.Node 的插入通过判断 next 指针是否为空，在队尾完成插入
+ *      2. 	LinkedHashMap.Entry 在 HashMap.Node 的基础上增加了 before, after指针，将 Hash 表中的所有的 链表内的数据联系在了一起
  */
 public abstract class MyLinkedHashMap<K, V> extends MyHashMap<K, V> {
 
@@ -42,7 +42,8 @@ public abstract class MyLinkedHashMap<K, V> extends MyHashMap<K, V> {
     abstract Entry<K,V> newNode(int hash, K key, V value, MyHashMap.Node<K, V> e);
 
     // 重写  afterNodeAccess 方法
-    // 当 Entry 的值被新的值替换的时候， 将节点移动到链尾
+    // 只有当 accessOrder = true 是，才会起作用
+    // 当 Entry 的值被新的值替换的时候，或者该节点被访问 时， 将改节点移动到链尾
     void afterNodeAccess(Node<K,V> e) {} // move node to last
 
 
