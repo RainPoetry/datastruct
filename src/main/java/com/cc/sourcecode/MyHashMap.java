@@ -92,8 +92,8 @@ public abstract class MyHashMap<K,V> {
 	// 分配或扩容 table 的存储空间, 设置 threshold
 	// 如果 table 有数据时，进行数据迁移
 	//  数据迁移(以数组中的单元格为操作单元)：
-	//		将 hashcode & oldCap == 0 (新增比特位是否为0)的数据用链表连接起来，放入到原来数组的 index 位置
-	//		将 hashcode & oldCap == 1 (新增比特位是否为1)的数据用链表连接起来，放入到原来数组的 index+oldCap 位置
+	//		将 hashcode & oldCap == 0 (新增比特位是否为 0 )的数据用链表连接起来，放入到原来数组的 index 位置
+	//		将 hashcode & oldCap == 1 (新增比特位是否为 1 )的数据用链表连接起来，放入到原来数组的 index+oldCap 位置
 	// 		这就相当于只有 hashcode & oldCap == 1 数据放入了新增的地址里面
 	//	1.8 对 resize 方法已经重写了，在并发情况下，不会导死循环的产生，但是容易发生另一个问题，就是数据丢失，
 	//  1.8 在对 table 按照索引进行遍历的时候，会将单元格里原来链表的数据拆分为两个链表然后存储到 index 和 index+oldCap 单元格内，
@@ -118,7 +118,7 @@ public abstract class MyHashMap<K,V> {
 	/* 保证函数返回值是大于等于给定参数initialCapacity最小的2的幂次方的数值。
 	* 1. 因为计算数据的索引 ： index = (size-1) & hashCode
 	* 		当 size 是 2 的幂次方的时候，与 hashcode 的与运算结果更为均匀（也就是数据分布更加均匀）
-	* 2. 在扩容 HashMap 的时候，数据的存储地址不虚要重新计算，
+	* 2. 在扩容 HashMap 的时候，数据的存储地址不需要重新计算，
 	* 		如果 hashcode & 扩容前的size == 0 ( 数据的 hashcode 在新增的 bit 位 为 0 )
 	* 			那么，数据的存储地址不需要改变
 	* 		如果 hashcode & 扩容前的size == 1 ( 数据的 hashcode 在新增的 bit 位 为 1 )

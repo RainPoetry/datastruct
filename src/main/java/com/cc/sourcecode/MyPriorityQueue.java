@@ -92,8 +92,13 @@ public class MyPriorityQueue<E> {
 		return result;
 	}
 
+	public E peek() {
+		return (size == 0) ? null : (E) queue[0];
+	}
+
 	// 下沉
-	@SuppressWarnings("unchecked")
+	// k 数组的第一个位置
+	// x 数组的最后一个元素
 	private void siftDown(int k, E x) {
 		Comparable<? super E> key = (Comparable<? super E>)x;
 		int half = size >>> 1;        // loop while a non-leaf
@@ -115,6 +120,8 @@ public class MyPriorityQueue<E> {
 	}
 
 	// 上浮
+	// k , 数组的最后一个位置
+	// x 待插入的数据
 	private void siftUp(int k, E x) {
 		Comparable<? super E> key = (Comparable<? super E>) x;
 		while (k > 0) {
@@ -123,7 +130,9 @@ public class MyPriorityQueue<E> {
 			// current > parent ? break : 上浮
 			if (key.compareTo((E) e) >= 0)
 				break;
+			// parent 放到 k 处
 			queue[k] = e;
+			// k 指向 原来 parent 的位置
 			k = parent;
 		}
 		queue[k] = key;
